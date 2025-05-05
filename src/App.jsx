@@ -74,6 +74,7 @@ function App() {
           display="flex"
           alignItems="center"
           justifyContent="space-around"
+          flexDirection={{ base: "column", md: "row" }}
         >
           <Card.Root
             maxW="sm"
