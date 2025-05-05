@@ -6,14 +6,25 @@ import {
   IconButton,
   Link,
   Separator,
+  Card,
+  Image,
+  Stack,
+  Text,
 } from "@chakra-ui/react";
+import heroImg from "../src/assets/img/2025_Portofolio_main.jpg";
 import { SiWantedly } from "react-icons/si";
 import { FaGithub, FaXTwitter } from "react-icons/fa6";
 
 function App() {
   return (
     <ChakraProvider value={defaultSystem}>
-      <Box bg="gray.900" minH="100vh" minW="100vw">
+      <Box
+        bg="gray.900"
+        minH="100vh"
+        minW="100vw"
+        display="flex"
+        flexDirection="column"
+      >
         {/* ヘッダー */}
         <Box>
           <HStack spacing={4} p={4} justify="flex-end">
@@ -56,6 +67,42 @@ function App() {
           </HStack>
           <Separator color="gray.500" />
         </Box>
+
+        {/* メイン */}
+        <Box
+          flex="1"
+          display="flex"
+          alignItems="center"
+          justifyContent="space-around"
+        >
+          <Card.Root maxW="sm" bg="gray.700" overflow="hidden">
+            <Card.Body>
+              <Image src={heroImg} />
+            </Card.Body>
+          </Card.Root>
+          <Card.Root maxW="sm" bg="gray.700" overflow="hidden">
+            <Card.Body>
+              <Stack>
+                <Text fontWeight="bold" textStyle="4xl" color="white">
+                  About
+                </Text>
+                <Text fontWeight="normal" textStyle="lg" color="white">
+                  氏名：藤池秀一
+                </Text>
+                <Text fontWeight="normal" textStyle="lg" color="white">
+                  生年月日：2003年10月31日
+                </Text>
+                <Text fontWeight="normal" textStyle="lg" color="white">
+                  所属：工学院大学(J3), 42Tokyo
+                </Text>
+                <Text fontWeight="normal" textStyle="lg" color="white">
+                  趣味：ランニング, 筋トレ, 洋服, ライブ
+                </Text>
+              </Stack>
+            </Card.Body>
+          </Card.Root>
+        </Box>
+
         {/* フッター */}
         <Box>
           <Separator color="gray.500" />
