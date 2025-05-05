@@ -28,7 +28,7 @@ function App() {
         {/* ヘッダー */}
         <Box>
           <HStack spacing={4} p={4} justify="flex-end">
-            <Link
+            {/* <Link
               color="white"
               textStyle="lg"
               href="#"
@@ -54,11 +54,11 @@ function App() {
               _focus={{ outline: "none" }}
             >
               WORKS
-            </Link>
+            </Link> */}
             <Link
               color="white"
               textStyle="lg"
-              href="#"
+              href="mailto:fshu201031@gmail.com"
               _hover={{ color: "cyan.400" }}
               _focus={{ outline: "none" }}
             >
@@ -75,12 +75,22 @@ function App() {
           alignItems="center"
           justifyContent="space-around"
         >
-          <Card.Root maxW="sm" bg="gray.700" overflow="hidden">
+          <Card.Root
+            maxW="sm"
+            bg="gray.700"
+            overflow="hidden"
+            borderColor="cyan.400"
+          >
             <Card.Body>
               <Image src={heroImg} />
             </Card.Body>
           </Card.Root>
-          <Card.Root maxW="sm" bg="gray.700" overflow="hidden">
+          <Card.Root
+            maxW="sm"
+            bg="gray.700"
+            overflow="hidden"
+            borderColor="cyan.400"
+          >
             <Card.Body>
               <Stack>
                 <Text fontWeight="bold" textStyle="4xl" color="white">
